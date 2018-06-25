@@ -20,7 +20,7 @@ trait Impersonatable
 
     public function isImpersonating()
     {
-        return app();
+        return app(ImpersonateManager::class)->isImpersonating();
     }
 
     public function impersonate(ImpersonatableContract $user)
