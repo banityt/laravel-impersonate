@@ -28,7 +28,7 @@ class ImpersonateManager
         Auth::guard($to->guardName())->login($to);
 
         session()->put($this->sessionKey(), [
-            'id' => $from->getKey(),
+            'id' => $from->getAuthIdentifier(),
             'from_guard' => $from->guardName(),
         ]);
 
