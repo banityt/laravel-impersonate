@@ -30,7 +30,7 @@ public function guardName()
 
 * (Optional) You can customize your impersonation related rights
 ```php
-public funcion canImpersonate() : bool
+public function canImpersonate() : bool
 {
     return Bouncer::can('users_impersonate');
 }
